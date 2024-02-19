@@ -1,0 +1,148 @@
+  
+  
+/* Style for the container when mobiles are available */
+div.container {
+    margin: 20px;
+  }
+  
+  /* Style for the headers section */
+  div.headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h2.table-title {
+    font-size: 1.5rem;
+  }
+  
+  /* Style for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  thead th, tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Style for buttons in the table */
+  button.btn {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  button.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  /* Style for the error template */
+  h1 {
+    color: #dc3545;
+  }
+  
+  /* Style for the form wrapper */
+  div.from-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style for the mobileForm */
+  div.mobileForm {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2.text-center {
+    text-align: center;
+  }
+  
+  /* Style for the form groups */
+  .group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Style for the form action buttons */
+  div.action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button.save-changes {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  button.cancel {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .container {
+    transition: filter 0.5s ease; /* Apply a smooth transition effect on the filter property */
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add more styling as needed */
+  

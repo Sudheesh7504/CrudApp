@@ -1,0 +1,76 @@
+<div class="container">
+<div *ngIf="mobiles;else err">
+  <div class="headers">
+     <h2 class="table-title">Manage mobiles</h2>
+     <button (click)="openForm()" class="btn">Add Mobile</button>
+  </div>
+  <table>
+     <thead>
+        <tr>
+            <th>Mobile</th>
+            <th>Price</th>
+            <th>Ram</th>
+            <th>Storage</th>
+            <th></th>
+            <th></th>
+        </tr>
+     </thead>
+     <tbody class="text-centre">
+        <tr *ngFor="let mobile of mobiles">
+           <td>{{mobile['name']}}</td>
+           <td>{{mobile['price']}}</td>
+           <td>{{mobile['ram']}}</td>
+           <td>{{mobile['storage']}}</td>
+           <td>
+            <button (click)="openForm(mobile)" class="btn btn-primary">Edit</button>
+           </td>
+           <td>
+            <button (click)="deleteMobiles(mobile['id'])" class="btn btn-danger">Delete</button>
+           </td>
+        </tr>
+
+     </tbody>
+  </table>
+
+</div>
+
+
+<ng-template #err>
+    <h1>facing error</h1>
+</ng-template>
+
+<div class="overlay" *ngIf="showForm" (click)="closeForm()">
+    <div class="form-wrapper" (click)="$event.stopPropagation()">
+    <div class="mobileForm">
+        <h2 class="text-center text-info">{{formHeader}}</h2>
+
+        <div class="group">
+            <label for="">Name:</label>
+            <input type="text" class="form-control" [(ngModel)]="mobileName" required minlength="5"/>
+
+        </div>
+        <div class="group">
+            <label for="">Price:</label>
+            <input type="text" class="form-control" [(ngModel)]="price" required min="1000"/>
+
+        </div>
+        <div class="group">
+            <label for="">RAM:</label>
+            <input type="text" class="form-control" [(ngModel)]="ram" required min="1"/>
+
+        </div>
+        <div class="group">
+            <label for="">Storage:</label>
+            <input type="text" class="form-control" [(ngModel)]="storage" required min="1"/>
+
+        </div>
+        <div class="action">
+            <button (click)="saveMobile()">Save Changes</button>
+            <button (click)="closeForm()">Cancel</button>
+        </div>
+        
+
+    </div>
+
+</div>
+</div>
